@@ -1,5 +1,6 @@
 import './App.css'
-import HeroSection from './components/hero_section/HeroSection'
+import Benner from './components/benner_section/Benner'
+import StatsSection from './components/benner_section/stats_section/StatsSection'
 import Navbar from './components/navbar/Navbar'
 
 function App() {
@@ -8,7 +9,8 @@ function App() {
   return (
     <>
       <Navbar/>
-      <HeroSection/>
+      <Benner/>
+      <StatsSection/>
     </>
   )
 }

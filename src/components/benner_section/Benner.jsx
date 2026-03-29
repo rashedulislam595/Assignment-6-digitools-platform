@@ -3,9 +3,9 @@ import bennerImg from '../../assets/banner.png'
 import badge from '../../assets/badge.png'
 import playImg from '../../assets/Play.png'
 
-const HeroSection = () => {
+const Benner = () => {
     return (
-        <div className='w-11/12 md:w-10/12 mx-auto'>
+        <div className='w-11/12 md:w-10/12 mx-auto md:mb-14 mb-6'>
             <div className=" bg-base-200 py-20">
                 <div className="hero-content flex-col lg:flex-row-reverse gap-10">
                     <img
@@ -33,4 +33,4 @@ const HeroSection = () => {
     );
 };
 
-export default HeroSection;
+export default Benner;
