@@ -1,7 +1,8 @@
 import './App.css'
 import Benner from './components/benner_section/Benner'
-import StatsSection from './components/benner_section/stats_section/StatsSection'
+import StatsSection from './components/stats_section/StatsSection'
 import Navbar from './components/navbar/Navbar'
+import StepsSection from './components/steps_section/StepsSection'
 
 function App() {
 
@@ -11,6 +12,7 @@ function App() {
       <Navbar/>
       <Benner/>
       <StatsSection/>
+      <StepsSection/>
     </>
   )
 }
