@@ -1,19 +1,28 @@
-import React, { use } from 'react';
+import React, { use, useState, } from 'react';
 import ProductCard from './ProductCard';
+import Cart from './cart_container/Cart';
 
-const Product = ({ productPromise }) => {
+const Product = ({ productPromise,selectCart,setSelectCart }) => {
     const products = use(productPromise);
+    const [selectType, setSelectType] = useState("Products")
+    
     return (
         <div className='w-11/12 md:w-10/12 mx-auto '>
             <div className='text-center'>
                 <h2 className=' text-4xl md:text-5xl font-extrabold text-[#001931] mb-4'>Premium Digital Tools</h2>
                 <p className='text-[#627382]'>Choose from our curated collection of premium digital products designed <br />to boost your productivity and creativity.</p>
             </div>
+           {/* toggling tab */}
+            <div className='mt-5 flex justify-center gap-1'>
+                <button onClick={()=>setSelectType("Products")} className={`btn w-32 rounded-full ${selectType==="Products"?"bg-linear-to-r from-[#4F39F6] to-[#9514FA] text-[#FFFFFF]": "text-[#13131360]"} `}>Products</button>
+                <button onClick={()=>setSelectType("Cart")} className={`btn w-32 rounded-full ${selectType==="Cart"?"bg-linear-to-r from-[#4F39F6] to-[#9514FA] text-[#FFFFFF]": "text-[#13131360]"}`}>Cart ({selectCart.length})</button>
+            </div>
+
 
 
             <div className='grid sm:grid-cols-2 md:grid-cols-3 gap-5 mt-10'>
                 {
-                    products.map(product => <ProductCard key={product.id} product={product}></ProductCard>)
+                   selectType==="Products"?products.map(product => <ProductCard key={product.id} product={product} setSelectCart={setSelectCart} selectCart={selectCart}/>):<Cart selectCart={selectCart}/>
                 }
             </div>
 

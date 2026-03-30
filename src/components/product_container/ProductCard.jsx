@@ -1,9 +1,17 @@
 import { Check } from 'lucide-react';
-import React from 'react';
+import React, { useState } from 'react';
 import Features from './Features';
 
-const ProductCard = ({product}) => {
-    console.log(product)
+const ProductCard = ({product,setSelectCart,selectCart}) => {
+    const [isBuyNow, setIsBuyNow] = useState(false);
+    const handleBuyNow = (product) =>{
+        const exist = selectCart.find(item => item.name == product.name);
+        if(!exist){
+            setSelectCart([...selectCart,product])
+            setIsBuyNow(true);
+        }
+    }
+
     const tagStyle = {
         "best seller":"bg-[#FEF3C6] text-[#BB4D00]",
         "popular" : "bg-[#E1E7FF] text-[#9514FA]",
@@ -28,7 +36,7 @@ const ProductCard = ({product}) => {
                 }
                 
             </ul>
-            <button className='btn bg-linear-to-r from-[#4F39F6] to-[#9514FA] text-[#FFFFFF] font-bold w-full rounded-full'>Buy Now</button>
+            <button type='button' onClick={()=>handleBuyNow(product)} className={`btn ${isBuyNow?"bg-green-600 text-white":"bg-linear-to-r from-[#4F39F6] to-[#9514FA] text-[#FFFFFF]"} font-bold w-full rounded-full`}>{isBuyNow?"Added to Cart":"Buy Now"}</button>
 
         </div>
     );

@@ -1,11 +1,11 @@
 import { ShoppingCart } from 'lucide-react';
 import React from 'react';
 
-const Navbar = () => {
+const Navbar = ({selectCart}) => {
     return (
-        <div >
+        <div className='sticky top-0 z-50'>
             <div className="navbar bg-base-100 shadow-sm">
-                <div className='w-11/12 md:w-10/12 mx-auto flex items-center'>
+                <div className='w-11/12 md:w-10/12 mx-auto flex items-center '>
                     <div className="navbar-start">
                         <div className="dropdown">
                             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -33,7 +33,10 @@ const Navbar = () => {
                         </ul>
                     </div>
                     <div className="navbar-end space-x-2.5 md:space-x-4">
-                        <ShoppingCart />
+                        <div className='relative'>
+                            <ShoppingCart />
+                            <p className={` w-5 h-5 text-center bg-red-500 text-white rounded-full absolute -top-3 -right-3  ${selectCart.length >0?"inline": "hidden"} text-sm font-bold`}>{selectCart.length}</p>
+                        </div>
                         <button className='btn rounded-full'>Login</button>
                         <button className='btn bg-linear-to-r from-[#4F39F6] to-[#9514FA] rounded-full text-[#FFFFFF] font-semibold'>Get Started</button>
                     </div>
