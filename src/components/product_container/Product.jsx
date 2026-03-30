@@ -1,10 +1,12 @@
 import React, { use, useState, } from 'react';
-import ProductCard from './ProductCard';
-import Cart from './cart_container/Cart';
+
+import Cart from '../cart_container/Cart';
+import ProductCardContainer from './ProductCardContainer';
 
 const Product = ({ productPromise,selectCart,setSelectCart }) => {
     const products = use(productPromise);
     const [selectType, setSelectType] = useState("Products")
+    const [total,setTotal] = useState(0)
     
     return (
         <div className='w-11/12 md:w-10/12 mx-auto '>
@@ -20,9 +22,9 @@ const Product = ({ productPromise,selectCart,setSelectCart }) => {
 
 
 
-            <div className='grid sm:grid-cols-2 md:grid-cols-3 gap-5 mt-10'>
+            <div >
                 {
-                   selectType==="Products"?products.map(product => <ProductCard key={product.id} product={product} setSelectCart={setSelectCart} selectCart={selectCart}/>):<Cart selectCart={selectCart}/>
+                   selectType==="Products"?<ProductCardContainer products={products} setSelectCart={setSelectCart} selectCart={selectCart} total={total} setTotal={setTotal}/>:<Cart selectCart={selectCart} total={total}/>
                 }
             </div>
 

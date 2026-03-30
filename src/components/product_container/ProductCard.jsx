@@ -2,13 +2,14 @@ import { Check } from 'lucide-react';
 import React, { useState } from 'react';
 import Features from './Features';
 
-const ProductCard = ({product,setSelectCart,selectCart}) => {
+const ProductCard = ({product,setSelectCart,selectCart,total,setTotal}) => {
     const [isBuyNow, setIsBuyNow] = useState(false);
     const handleBuyNow = (product) =>{
         const exist = selectCart.find(item => item.name == product.name);
         if(!exist){
             setSelectCart([...selectCart,product])
             setIsBuyNow(true);
+            setTotal(total+product.price)
         }
     }
 
