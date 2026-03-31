@@ -6,6 +6,7 @@ import StepsSection from './components/steps_section/StepsSection'
 import { Suspense, useState } from 'react'
 import Product from './components/product_container/Product'
 import { ToastContainer } from 'react-toastify'
+import PricingSection from './components/pricing_container/PricingSection'
 
 const productJson = async() =>{
     const res = await fetch("/products.json")
@@ -28,6 +29,8 @@ function App() {
         <Product productPromise={productPromise} selectCart={selectCart} setSelectCart={setSelectCart}/>
       {/* </Suspense> */}
       <StepsSection/>
+
+      <PricingSection/>
 
     {/* react-toastify*/}
       <ToastContainer />

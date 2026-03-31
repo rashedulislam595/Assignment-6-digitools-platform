@@ -11,9 +11,12 @@ const ProductCard = ({product,setSelectCart,selectCart,total,setTotal}) => {
             setSelectCart([...selectCart,product])
             setIsBuyNow(true);
             setTotal(total+product.price)
-            toast.success("Product Added to cart successfully",{
+            toast.success(`${product.name} Added to cart successfully`,{
                 theme: "dark",
             })
+        }
+        else{
+            toast.error("Already in cart")
         }
     }
 
@@ -25,7 +28,7 @@ const ProductCard = ({product,setSelectCart,selectCart,total,setTotal}) => {
     const style = tagStyle[product.tagType];
     const features = product.features
     return (
-        <div className='space-y-4 p-6 shadow-sm  rounded-2xl border border-[#4e566036] flex flex-col'>
+        <div className='space-y-4 p-6 shadow-sm  rounded-2xl border border-[#4e566036] flex flex-col hover:scale-103'>
             <div className='text-right'>
                 <button className={`text-sm ${style}  font-medium  py-2 px-3 rounded-full`}>{product.tagType}</button>
             </div>

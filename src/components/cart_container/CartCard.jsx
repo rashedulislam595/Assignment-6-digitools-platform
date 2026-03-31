@@ -3,8 +3,8 @@ import { toast } from 'react-toastify';
 
 const CartCard = ({ product,selectCart,setSelectCart,total,setTotal}) => {
     const handleRemove = (product) =>{
-        const newCardList = selectCart.filter(item => item.name!=product.name);
-        setSelectCart(newCardList)
+        const filterProduct = selectCart.filter(item => item.name!=product.name);
+        setSelectCart(filterProduct)
         setTotal(total-product.price);
         toast.success("Product removed successfully")
     }
