@@ -24,7 +24,7 @@ const Product = ({ productPromise,selectCart,setSelectCart }) => {
 
             <div >
                 {
-                   selectType==="Products"?<ProductCardContainer products={products} setSelectCart={setSelectCart} selectCart={selectCart} total={total} setTotal={setTotal}/>:<Cart selectCart={selectCart} total={total}/>
+                   selectType==="Products"?<ProductCardContainer products={products} setSelectCart={setSelectCart} selectCart={selectCart} total={total} setTotal={setTotal}/>:<Cart selectCart={selectCart} setSelectCart={setSelectCart} total={total} setTotal={setTotal}/>
                 }
             </div>
 

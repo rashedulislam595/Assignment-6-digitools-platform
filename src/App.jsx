@@ -5,6 +5,7 @@ import Navbar from './components/navbar/Navbar'
 import StepsSection from './components/steps_section/StepsSection'
 import { Suspense, useState } from 'react'
 import Product from './components/product_container/Product'
+import { ToastContainer } from 'react-toastify'
 
 const productJson = async() =>{
     const res = await fetch("/products.json")
@@ -27,6 +28,9 @@ function App() {
         <Product productPromise={productPromise} selectCart={selectCart} setSelectCart={setSelectCart}/>
       {/* </Suspense> */}
       <StepsSection/>
+
+    {/* react-toastify*/}
+      <ToastContainer />
     </>
   )
 }

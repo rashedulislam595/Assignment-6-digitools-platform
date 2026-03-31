@@ -1,6 +1,14 @@
 import React from 'react';
+import { toast } from 'react-toastify';
 
-const CartCard = ({ product }) => {
+const CartCard = ({ product,selectCart,setSelectCart,total,setTotal}) => {
+    const handleRemove = (product) =>{
+        const newCardList = selectCart.filter(item => item.name!=product.name);
+        setSelectCart(newCardList)
+        setTotal(total-product.price);
+        toast.success("Product removed successfully")
+    }
+
     return (
         <div className='flex justify-between items-center bg-[#F9FAFC] rounded-2xl p-5 shadow-sm'>
             <div className='flex gap-3 items-center'>
@@ -10,7 +18,7 @@ const CartCard = ({ product }) => {
                     <p className='text-[#627382] font-medium'>${product.price}</p>
                 </div>
             </div>
-            <button className='btn text-[#FF3980]'>Remove</button>
+            <button onClick={()=>handleRemove(product)} className='btn text-[#FF3980]'>Remove</button>
         </div>
 
     );

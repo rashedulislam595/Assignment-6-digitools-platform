@@ -1,13 +1,13 @@
 import React from 'react';
 import CartCard from './CartCard';
 
-const Cart = ({selectCart,total}) => {
+const Cart = ({selectCart,total,setSelectCart,setTotal}) => {
     
     return (
         <div className='space-y-6 border p-10 rounded-2xl border-[#6273822d] my-10'>
             <h2 className='text-2xl font-bold text-[#101727]'>Your Cart</h2>
             {
-                selectCart.map(product=> <CartCard key={product.id} product={product}/>)
+                selectCart.map(product=> <CartCard key={product.id} product={product} selectCart={selectCart} setSelectCart={setSelectCart} total={total} setTotal={setTotal}/>)
             }
             <div className='flex justify-between items-center'>
                 <p className='text-[#627382] font-medium text-xl'>Total:</p>

@@ -1,6 +1,7 @@
 import { Check } from 'lucide-react';
 import React, { useState } from 'react';
 import Features from './Features';
+import { toast } from 'react-toastify';
 
 const ProductCard = ({product,setSelectCart,selectCart,total,setTotal}) => {
     const [isBuyNow, setIsBuyNow] = useState(false);
@@ -10,6 +11,9 @@ const ProductCard = ({product,setSelectCart,selectCart,total,setTotal}) => {
             setSelectCart([...selectCart,product])
             setIsBuyNow(true);
             setTotal(total+product.price)
+            toast.success("Product Added to cart successfully",{
+                theme: "dark",
+            })
         }
     }
 
