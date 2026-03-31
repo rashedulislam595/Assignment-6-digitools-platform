@@ -7,6 +7,8 @@ import { Suspense, useState } from 'react'
 import Product from './components/product_container/Product'
 import { ToastContainer } from 'react-toastify'
 import PricingSection from './components/pricing_container/PricingSection'
+import WorkflowSection from './components/workflow_section/WorkflowSection'
+import Footer from './components/footer/Footer'
 
 const productJson = async() =>{
     const res = await fetch("/products.json")
@@ -31,6 +33,8 @@ function App() {
       <StepsSection/>
 
       <PricingSection/>
+      <WorkflowSection/>
+      <Footer/>
 
     {/* react-toastify*/}
       <ToastContainer />
