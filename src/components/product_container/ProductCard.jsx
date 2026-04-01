@@ -44,7 +44,7 @@ const ProductCard = ({product,setSelectCart,selectCart,total,setTotal}) => {
                 }
                 
             </ul>
-            <button type='button' onClick={()=>handleBuyNow(product)} className={`btn ${isBuyNow?"bg-green-600 text-white":"bg-linear-to-r from-[#4F39F6] to-[#9514FA] text-[#FFFFFF]"} font-bold w-full rounded-full`}>{isBuyNow?"Added to Cart":"Buy Now"}</button>
+            <button type='button' onClick={()=>handleBuyNow(product)} className={`btn ${isBuyNow?"bg-green-600 text-white":"bg-linear-to-r from-[#4F39F6] to-[#9514FA] hover:bg-linear-to-r hover:from-[#9514FA] hover:to-[#4F39F6] text-[#FFFFFF]"} font-bold w-full rounded-full`}>{isBuyNow?"Added to Cart":"Buy Now"}</button>
 
         </div>
     );

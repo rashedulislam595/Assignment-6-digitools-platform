@@ -23,8 +23,8 @@ const Benner = () => {
                             software—all in one place. Start creating faster today. <br />Explore Products
                         </p>
                         <div className='flex items-center gap-4'>
-                            <button className='btn bg-linear-to-r from-[#4F39F6] to-[#9514FA] rounded-full text-[#FFFFFF] font-semibold'>Explore Products</button>
-                            <button className="btn border border-[#9514FA] text-[#9514FA] rounded-full"><img src={playImg} alt="" /> Watch Demo</button>
+                            <button className='btn bg-linear-to-r from-[#4F39F6] to-[#9514FA] rounded-full text-[#FFFFFF] hover:text-[#9514FA] hover:bg-linear-to-r hover:from-orange-50 hover:to-white hover:border-[#9514FA] font-semibold'>Explore Products</button>
+                            <button className="btn border border-[#9514FA] text-[#9514FA] hover:bg-[#9614faa2] hover:border-none hover:text-white rounded-full"><img src={playImg} alt="" /> Watch Demo</button>
                         </div>
                     </div>
                 </div>

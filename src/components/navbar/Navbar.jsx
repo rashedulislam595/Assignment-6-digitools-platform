@@ -38,7 +38,7 @@ const Navbar = ({selectCart}) => {
                             <p className={` w-5 h-5 text-center bg-red-500 text-white rounded-full absolute -top-3 -right-3  ${selectCart.length >0?"inline": "hidden"} text-sm font-bold`}>{selectCart.length}</p>
                         </div>
                         <button className='btn rounded-full'>Login</button>
-                        <button className='btn bg-linear-to-r from-[#4F39F6] to-[#9514FA] rounded-full text-[#FFFFFF] font-semibold'>Get Started</button>
+                        <button className='btn bg-linear-to-r from-[#4F39F6] to-[#9514FA] rounded-full text-[#FFFFFF] font-semibold hover:bg-linear-to-r hover:from-white hover:to-white hover:text-[#9514FA] hover:border-[#9514FA]'>Get Started</button>
                     </div>
                 </div>
             </div>
