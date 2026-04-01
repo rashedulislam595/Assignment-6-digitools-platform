@@ -10,7 +10,7 @@ const CartCard = ({ product,selectCart,setSelectCart,total,setTotal}) => {
     }
 
     return (
-        <div className='flex justify-between items-center bg-[#F9FAFC] rounded-2xl p-5 shadow-sm'>
+        <div className='flex justify-between items-center bg-[#F9FAFC] rounded-2xl p-5 shadow-sm gap-4'>
             <div className='flex gap-3 items-center'>
                 <img className='w-14 h-14' src={product.icon} alt={product.name} />
                 <div>
