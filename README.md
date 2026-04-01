@@ -1,16 +1,30 @@
-# React + Vite
+Name of your Project
+A little Description
+Technology that you use
+3 Features about your project.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# DigiTools Platform
+## Description
+DigiTools Platform is a modern web application that provides a collection of useful digital tools in one place. It is designed to enhance productivity by offering easy access to various tools through a clean and user-friendly interface. The platform focuses on simplicity, performance, and a smooth user experience.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Technologies Used
+- HTML5  
+- Tailwind CSS 
+- DaisyUI 
+- JavaScript (ES6+)  
+- React.js  
+- Netlify
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Key Features
+- **Interactive UI Design** – Clean, modern, and responsive interface for better user experience across devices.  
+- **Multiple Tools in One Platform** – Access different digital tools from a single place.  
+- **Fast & Lightweight** – Optimized performance with smooth navigation and quick loading time.
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Thank You
+Thanks for visiting this project! Feel free to give feedback or suggestions.

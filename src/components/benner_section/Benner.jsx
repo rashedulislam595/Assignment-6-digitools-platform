@@ -13,11 +13,11 @@ const Benner = () => {
                         className="max-w-sm rounded-lg shadow-2xl "
                     />
                     <div>
-                        <span className='flex gap-2 items-center py-2 px-4 w-[320px] rounded-full bg-[#E1E7FF]'>
+                        <span className='flex gap-2 items-center py-2 px-4 w-[320px] rounded-full bg-[#E1E7FF] justify-center'>
                             <img src={badge} alt="" />
                             <p className='bg-linear-to-r from-[#4F39F6] to-[#9514FA] bg-clip-text text-transparent font-medium text-[17px]'>New: AI-Powered Tools Available</p>
                         </span>
-                        <h1 className="text-6xl font-extrabold text-[#101727] mt-2.5 ">Supercharge Your <br />Digital Workflow</h1>
+                        <h1 className="text-4xl md:text-6xl font-extrabold text-[#101727] mt-2.5  text-center sm:text-left ">Supercharge Your <br />Digital Workflow</h1>
                         <p className="py-6 text-[#627382]">
                             Access premium AI tools, design assets, templates, and productivity <br />
                             software—all in one place. Start creating faster today. <br />Explore Products
